@@ -22,7 +22,7 @@ PKG_LICENSE_FILES:=LICENSE
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/homebridge-config-ui-x 
+define Package/node-homebridge-config-ui-x 
   SUBMENU:=Node.js
   SECTION:=lang
   CATEGORY:=Languages
