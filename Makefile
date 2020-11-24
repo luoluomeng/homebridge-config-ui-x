@@ -31,7 +31,7 @@ define Package/homebridge-config-ui-x
   DEPENDS:=+node +node-npm +node-homebridge
 endef
 
-define Package/homebridge-config-ui-x/description
+define Package/node-homebridge-config-ui-x/description
  Homebridge Config UI X is a web based management tool for Homebridge that allows you to manage all aspects of your Homebridge setup.
 endef
 
@@ -59,7 +59,7 @@ define Build/Compile
 	rm -rf $(TMP_DIR)/npm-cache-$(TMPNPM)
 endef
 
-define Package/homebridge-config-ui-x/install
+define Package/node-homebridge-config-ui-x/install
 	$(INSTALL_DIR) $(1)/usr/lib/node_modules/$(PKG_NPM_NAME)
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/node_modules/$(PKG_NPM_NAME)/{*.json,*.md,*.js} \
 		$(1)/usr/lib/node_modules/$(PKG_NPM_NAME)/
@@ -71,4 +71,4 @@ define Package/homebridge-config-ui-x/install
 		$(1)/usr/lib/node_modules/$(PKG_NPM_NAME)/
 endef
 
-$(eval $(call BuildPackage,node-homebridge-bravia-tvos))
+$(eval $(call BuildPackage,node-homebridge-config-ui-x))
